@@ -1,0 +1,243 @@
+<!-- 
+// Complex Data Types - Objects Part 1 //
+// -describe a peice of data in depth
+//- key: value pairs -->
+
+<html>
+<head>
+</head>
+
+<body>
+    <script>
+        var dog = {
+            name: "spot",
+            age: 4,
+            isHungry: true,
+            favToys: ["bone", "ball", "squeeky thing"]
+        }
+
+        // dot notation
+        console.log(dog.age)
+        document.body.prepend(dog.age)
+
+
+        // bracket notation
+        console.log(dog["age"])
+        document.body.prepend(dog["age"])
+
+    </script>
+</body>
+<html>
+
+
+<!-- xxxxxxx  -->
+<html>
+<head>
+</head>
+<body>
+    <script>
+        var larry = {
+            name: "larry",
+            age: 20,
+            friends: ["john", "lisa", "al"],
+            isPetOwner: true,
+            greeting: "Hello Friend!",
+            sayGreeting: function () {
+                console.log(this.greeting)
+                
+            }
+        }
+
+        larry.sayGreeting()
+
+        console.log(larry.name) 
+        document.body.prepend(larry.greeting)
+
+        // dot notation
+        larry.age
+        document.body.prepend(larry.age)
+
+        // bracket notation
+        larry["age"]
+        document.body.prepend(larry["age"])
+    </script>
+</body>
+<html>
+
+
+<!-- xxxxxxxxxxxx -->
+<html>
+<head>
+</head>
+<body>
+    <script>
+        // Functions & Methods
+        // Function: a type of data that allows us to execute specific code when/as needed
+        // login
+        // Method: A function that is a property of an object
+
+        // this- keyword inside of an object refers to itself
+        var user = {
+            name: "DAVE",
+            email: null,
+            friends: ["rick", "sarah"],
+            address: {
+                street: "123 street",
+                city: "gotham"
+            },
+            id: 0,
+            nickname: undefined
+        }
+
+        if (user.name) {  //testing truthy or falsy
+            console.log("It is true!")
+        } else {
+            console.log("It is false!")
+        }
+
+        console.log(user.name === true) //comparism
+    </script>
+</body>
+<html>
+
+
+
+<!-- xxxxxx  -->
+<html>
+<head>
+</head>
+<body>
+    <script>
+        var username = "joe"
+        var password = "joe123"
+
+        // And
+        // &&
+        if (username === "joe" && password === "joe123") {
+            console.log("Access granted")
+            console.log(`${username} Access granted`)
+    document.body.prepend(`${username} "Access granted"`)
+
+        } else {
+            console.log("Username or password are incorrect")
+        }
+
+
+        // Or
+        // ||
+        if (username === "" || password === "") {
+            // or   
+            //if(!username || !password){
+            console.log("Please provide username and password")
+        } else {
+            console.log("Both were provided")
+        }
+
+        // xxxxx nested if
+        if (!username || !password) {
+            console.log("Please provide username and password")
+        } else {
+            if (username === "joe" && password === "joe123") {
+                console.log("Access granted")
+            } else {
+                console.log("Username or password are incorrect")
+            }
+        }
+    </script>
+</body>
+<html>
+
+
+<!-- xxxxxx  -->
+<html>
+<head>
+</head>
+<body>
+    <script>
+        //For Loops
+
+        //Challenge: Print out in your console 0 mississippi to 100 mississippi.
+
+        for (let i = 0; i <= 100; i++) {
+            console.log(i + ' mississippi')
+        }
+</script>
+</body>
+<html>
+
+
+        <!-- xxxxx -->
+        <html>
+<head>
+</head>
+<body>
+    <script>
+
+        //For Loops with arrays
+
+        const europe = ['Sweden', 'Norway', 'Bulgaria', 'France', 'Germany', 'Poland']
+
+        console.log(europe[0])
+        console.log(europe[1])
+        console.log(europe[2])
+        console.log(europe[3])
+        console.log(europe[4])
+        console.log(europe[5])
+
+        // OR Using For Loop 
+        for (let i = 0; i < europe.length; i++) {
+            console.log(europe[i])
+        }
+    </script>
+</body>
+<html>
+
+
+<!-- xxxxxxxxx -->
+<html>
+<head>
+</head>
+<body>
+    <script>
+        //For Loops with if statements
+
+        //We are trying to find a table for my speed dating group to sit at, that is the most economical for the restaurant.
+        //  How many options do I have?
+
+        const tableNumbers = [5, 14, 7, 10, 20, 11, 12, 15, 3]
+
+        for (let i = 0; i < tableNumbers.length; i++) {
+            if (tableNumbers[i] % 2 === 0) {
+                console.log(tableNumbers[i])
+            }
+        }
+    </script>
+</body>
+<html>
+
+<!-- xxxxxxxx -->
+<html>
+<head>
+</head>
+<body>
+    <script>
+        //Mini Challenge: We have decided to play a game between all of us. 
+        // Create a loop that loops over the numbers given to each one of us. 
+        // If the person has even number, print out the word 'blue team'. If it is odd, print out the word 'red team'.
+
+        const people = 56
+
+        for (let i = 0; i < people; i++) {
+            //or better
+            for (let i = 1; i <= people; i++) {
+                if (i % 2 === 0) {
+                    console.log('Person ' + i + ' is on the blue team')
+                } else {
+                    console.log('Person ' + i + ' is on the red team')
+                }
+            }
+    </script>
+</body>
+<html>
+
+
